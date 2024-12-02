@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ICON-->
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <title>Park-In BCP</title>
+    <!--STYLING-->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="left-links">
+      <a href="javascript:void(0);" onclick="showForm('signin')">Sign In</a>
+      <a href="javascript:void(0);" onclick="showForm('signup')">Sign Up</a>
+    </div>
+    <div class="logo">
+      Bestlink Parking
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1>Welcome to Bestlink College Parking</h1>
+    <p>Convenient and secure parking solutions for students and teachers at <br>Bestlink College of the Philippines, ensuring a hassle-free experience for all.</p>
+    <a href="javascript:void(0);" class="btn" onclick="showForm('signin')">Get Started</a>
+  </div>
+
+  <!-- Sign In Form -->
+  <div class="form-container" id="signin-form" style="display: none;">
+    <button class="close-btn" onclick="closeForm()">✖</button>
+    <h2>Sign In</h2>
+    <form id="signin">
+        <input type="email" id="signin-email" placeholder="Enter your email" required>
+        <input type="password" id="signin-password" placeholder="Enter your password" required>
+        <button type="submit" class="SignInbtn">Sign In</button>
+        <div class="SignInRegister">
+          <p class="FormP">Don't have an account? </p>
+          <a href="javascript:void(0);" class="SignInReg" onclick="showForm('signup')">Register Now!</a>
+        </div>
+    </form>
+  </div>
+
+  <!-- Sign Up Form -->
+  <div class="form-container" id="signup-form" style="display: none;">
+    <button class="close-btn" onclick="closeForm()">✖</button>
+    <h2>Sign Up</h2>
+    <form id="signup">
+        <input type="text" id="signup-name" placeholder="Enter your name" required>
+        <input type="email" id="signup-email" placeholder="Enter your email" required>
+        <input type="password" id="signup-password" placeholder="Create a password" required>
+        <button type="submit" class="SignUpbtn">Sign Up</button>
+        <div class="SignInRegister">
+          <p class="FormP">Already have an account? </p>
+          <a href="javascript:void(0);" class="SignInReg" onclick="showForm('signin')">Sign In Now!</a>
+        </div>
+    </form>
+  </div>
+  
+
+  <footer>
+    <p>
+      © 2024 Park-In BCP ♥️ Created by <span id="developer"></span>
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="authentication.js"></script>
+  <script src="autotyping.js"></script>
+  <script>
+    // Sign Up form handling
+    // function handleSignUp(event) {
+    //   event.preventDefault(); // Prevent the form from submitting
+  
+    //   // Get the form values
+    //   const name = document.getElementById('signup-name').value;
+    //   const email = document.getElementById('signup-email').value;
+    //   const password = document.getElementById('signup-password').value;
+  
+    //   // Store user data in localStorage (you can use sessionStorage too)
+    //   localStorage.setItem('userName', name);
+    //   localStorage.setItem('userEmail', email);
+    //   localStorage.setItem('userPassword', password);
+  
+    //   // Show the success alert and redirect
+    //   alert('Successfully Registered!');
+    //   window.location.href = './User/user.html'; // Redirect to user page
+    // }
+  
+    // Function to show the form based on the type (signin or signup)
+    function showForm(form) {
+      const signinForm = document.getElementById('signin-form');
+      const signupForm = document.getElementById('signup-form');
+  
+      if (form === 'signin') {
+        signinForm.style.display = 'block';
+        signupForm.style.display = 'none';
+      } else if (form === 'signup') {
+        signupForm.style.display = 'block';
+        signinForm.style.display = 'none';
+      }
+    }
+  
+    // Function to close the forms
+    function closeForm() {
+      const signinForm = document.getElementById('signin-form');
+      const signupForm = document.getElementById('signup-form');
+      signinForm.style.display = 'none';
+      signupForm.style.display = 'none';
+    }
+  
+    // Sign In validation function (for demonstration purposes)
+    // function validateSignIn(event) {
+    //   event.preventDefault(); // Prevent form submission
+  
+    //   const email = document.getElementById('signin-email').value;
+    //   const password = document.getElementById('signin-password').value;
+  
+    //   // Check login details
+    //   const storedEmail = localStorage.getItem('userEmail');
+    //   const storedPassword = localStorage.getItem('userPassword');
+  
+    //   if (email === 'admin123@bcp.com' && password === 'admin123') {
+    //     alert('Successfully Logged In!');
+    //     window.location.href = 'dashboard.html'; // Redirect to dashboard
+    //   } else if (email === storedEmail && password === storedPassword) {
+    //     alert('Successfully Logged In!');
+    //     window.location.href = './User/user.html'; // Redirect to user page
+    //   } else {
+    //     alert('Invalid email or password!');
+    //   }
+    // }
+  </script>
+</body>
+</html>
+  

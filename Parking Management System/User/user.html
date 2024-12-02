@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--ICON-->
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon" />
+    <title>User Park-In</title>
+    <!--STYLING-->
+    <link rel="stylesheet" href="./user.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="left-links">
+        <h3>Hello, User!</h3>
+        <a href="../main.html">Logout</a>
+      </div>
+      <div class="middle-links">
+        <a href="./userAbout.html">About</a>
+        <a href="./userMoney.html">Pricing</a>
+      </div>
+    
+      <!-- Burger Icon -->
+      <div class="burger-icon" onclick="toggleMenu()">
+        &#9776; <!-- This is the hamburger icon -->
+      </div>
+    
+      <!-- Burger Menu (Initially hidden) -->
+      <div class="burger-nav" id="burgerNav" style="display: none;">
+        <a href="./userAbout.html">About</a>
+        <a href="./userMoney.html">Pricing</a>
+        <span class="close" onclick="toggleMenu()">&#10006;</span>
+      </div>
+    
+      <div class="logo">Bestlink Parking</div>
+    </nav>
+    
+
+    <section class="parking-container">
+      <!-- <div class="parking-slot" id="slot1">
+        <h2>Parking Slot A1</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer1"></div>
+      </div>
+
+      <div class="parking-slot" id="slot2">
+        <h2>Parking Slot A2</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer2"></div>
+      </div>
+
+      <div class="parking-slot" id="slot3">
+        <h2>Parking Slot A3</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer3"></div>
+      </div>
+
+      <div class="parking-slot" id="slot4">
+        <h2>Parking Slot A4</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer4"></div>
+      </div>
+
+      <div class="parking-slot" id="slot5">
+        <h2>Parking Slot A5</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer5"></div>
+      </div>
+
+      <div class="parking-slot" id="slot6">
+        <h2>Parking Slot A6</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer6"></div>
+      </div>
+
+      <div class="parking-slot" id="slot7">
+        <h2>Parking Slot A7</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer7"></div>
+      </div>
+
+      <div class="parking-slot" id="slot8">
+        <h2>Parking Slot A8</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer8"></div>
+      </div>
+
+      <div class="parking-slot" id="slot9">
+        <h2>Parking Slot A9</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer9"></div>
+      </div>
+
+      <div class="parking-slot" id="slot10">
+        <h2>Parking Slot A10</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer10"></div>
+      </div>
+
+      <div class="parking-slot" id="slot11">
+        <h2>Parking Slot A11</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer11"></div>
+      </div>
+
+      <div class="parking-slot" id="slot12">
+        <h2>Parking Slot A12</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer12"></div>
+      </div>
+
+      <div class="parking-slot" id="slot13">
+        <h2>Parking Slot A13</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer13"></div>
+      </div>
+
+      <div class="parking-slot" id="slot14">
+        <h2>Parking Slot A14</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer14"></div>
+      </div>
+
+      <div class="parking-slot" id="slot15">
+        <h2>Parking Slot A15</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer15"></div>
+      </div>
+
+      <div class="parking-slot" id="slot16">
+        <h2>Parking Slot A16</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer16"></div>
+      </div>
+
+      <div class="parking-slot" id="slot17">
+        <h2>Parking Slot A17</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer17"></div>
+      </div>
+
+      <div class="parking-slot" id="slot18">
+        <h2>Parking Slot A18</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer18"></div>
+      </div>
+
+      <div class="parking-slot" id="slot19">
+        <h2>Parking Slot A19</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer19"></div>
+      </div>
+
+      <div class="parking-slot" id="slot20">
+        <h2>Parking Slot A20</h2>
+        <span class="status available" onclick="toggleStatus(this, 600)"
+          >Available</span
+        >
+        <div class="timer" id="timer20"></div>
+      </div> -->
+
+
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="AvailableData.js"></script>
+
+
+    <script>
+      // Function to toggle the parking status and start/reset a timer
+      function toggleStatus(element, waitTime) {
+        const status = element;
+        const timerElement = element.nextElementSibling;
+        const slotId = timerElement.id;
+    
+        // Check if the slot is available
+        if (status.classList.contains("available")) {
+          status.classList.remove("available");
+          status.classList.add("reserved");
+          status.innerHTML = "Reserved";
+    
+          // Start the reservation timer
+          startReservationTimer(slotId, waitTime, status, timerElement);
+        }
+      }
+    
+      // Function to start the reservation timer
+      function startReservationTimer(slotId, waitTime, statusElement, timerElement) {
+        let timeLeft = waitTime; // Convert waitTime to seconds
+    
+        // Update timer every second
+        window[slotId + "Timer"] = setInterval(() => {
+          if (timeLeft > 0) {
+            timeLeft--;
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerElement.innerHTML = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+          } else {
+            // Reset the slot to "Available" when time's up
+            clearInterval(window[slotId + "Timer"]);
+            statusElement.classList.remove("reserved");
+            statusElement.classList.add("available");
+            statusElement.innerHTML = "Available";
+            timerElement.innerHTML = "";
+          }
+        }, 1000);
+      }
+    
+      // Function to toggle the burger menu visibility
+      function toggleMenu() {
+        const burgerNav = document.getElementById('burgerNav');
+        // Toggle the burger menu visibility
+        if (burgerNav.style.display === 'block') {
+          burgerNav.style.display = 'none';
+        } else {
+          burgerNav.style.display = 'block';
+        }
+      }
+    </script>
+    
+    
+      
+      
+  </body>
+</html>

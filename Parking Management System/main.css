@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: normal;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/landpage-bg.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100vh;
+    width: 100vw; 
+    color: white; 
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center Horizontally */
+    align-items: center; /* Center Vertically */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space Between the Left and Right Sections */
+    align-items: center; /* Vertically Center Items */
+    padding: 10px 20px;
+    background-color: #004080; 
+    color: white;
+    position: absolute; /* Keep Navbar at the Top */
+    top: 0;
+    width: 100%; /* Full width */
+}
+
+.navbar .left-links {
+    display: flex;
+    gap: 15px; /* Space Between Links */
+}
+
+.navbar .left-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .left-links a:hover {
+    background-color: #003366; 
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5; /* Improve Readability */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #004080; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #003366; 
+    transform: scale(1.05); /* Slight Zoom Effect */
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* General form styles */
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    z-index: 1000;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid black;
+    justify-content: center;
+
+}
+
+/* SIGN IN FORM */
+
+.SignInbtn, .SignUpbtn {
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    background-color: #004080; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.SignInbtn:hover, .SignUpbtn:hover  {
+    background-color: #003366; 
+    transform: scale(1.05); /* Slight Zoom Effect */
+}
+
+.SignInRegister {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.FormP {
+    font-size: 12px; 
+    display: flex;
+}
+
+.SignInReg {
+    margin-left: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    transition: all .3s ease-in-out;
+}
+
+.SignInReg:hover {
+    color: #004080;
+}
+
+
+/* Background overlay for the forms  and X button */
+.form-container {
+    display: none;
+}
+
+.form-container .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    color: black;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: All 0.3s ease-in-out;
+}
+
+.form-container .close-btn:hover {
+    color: red;
+}
+
+/*Pop Up Succesfully*/
+
+#success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#success-popup button {
+    margin-top: 10px;
+}
+
+/*FOR REPONSIVE MOBILE*/
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar .left-links a {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+    .navbar .logo {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 7px 10px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 440px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar .left-links a {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+    .navbar .logo {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 7px 10px;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 320px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .left-links a {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 7px 10px;
+    }
+
+    footer {
+        font-size: 2em;
+    }
+}
+

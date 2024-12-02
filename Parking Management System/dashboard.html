@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--ICON-->
+  <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon" />
+  <title>Admin Park-In</title>
+  <!--STYLING-->
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="left-links">
+      <h3>Hello, Admin!</h3>
+      <div class="logOut"><a href="main.html">Logout</a></div>
+    </div>
+  
+    <div class="middle-links">
+      <a href="./Dashboard/about.html">About</a>
+      <a href="./Dashboard/money.html">Pricing</a>
+    </div>
+  
+    <div class="logo">Bestlink Parking</div>
+  
+    <!-- Burger Icon -->
+    <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
+  
+    <!-- Hidden menu that will appear on smaller screens -->
+    <div class="burger-nav" id="burgerNav">
+      <a href="./Dashboard/about.html">About</a>
+      <a href="./Dashboard/money.html">Pricing</a>
+      <span class="close" onclick="toggleMenu()">&#10006;</span>
+    </div>
+  </nav>
+  
+
+  <section class="parking-container">
+<!--     
+    <div class="parking-slot" id="slot1">
+      <h2>Parking Slot A1</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer1"></div>
+    </div>
+
+    <div class="parking-slot" id="slot2">
+      <h2>Parking Slot A2</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer2"></div>
+    </div>
+
+    <div class="parking-slot" id="slot3">
+      <h2>Parking Slot A3</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer3"></div>
+    </div>
+
+    <div class="parking-slot" id="slot4">
+      <h2>Parking Slot A4</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer4"></div>
+    </div>
+
+    <div class="parking-slot" id="slot5">
+      <h2>Parking Slot A5</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer5"></div>
+    </div>
+
+    <div class="parking-slot" id="slot6">
+      <h2>Parking Slot A6</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer6"></div>
+    </div>
+
+    <div class="parking-slot" id="slot7">
+      <h2>Parking Slot A7</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer7"></div>
+    </div>
+
+    <div class="parking-slot" id="slot8">
+      <h2>Parking Slot A8</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer8"></div>
+    </div>
+
+    <div class="parking-slot" id="slot9">
+      <h2>Parking Slot A9</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer9"></div>
+    </div>
+
+    <div class="parking-slot" id="slot10">
+      <h2>Parking Slot A10</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer10"></div>
+    </div>
+
+    <div class="parking-slot" id="slot11">
+      <h2>Parking Slot A11</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer11"></div>
+    </div>
+
+    <div class="parking-slot" id="slot12">
+      <h2>Parking Slot A12</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer12"></div>
+    </div>
+
+    <div class="parking-slot" id="slot13">
+      <h2>Parking Slot A13</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer13"></div>
+    </div>
+
+    <div class="parking-slot" id="slot14">
+      <h2>Parking Slot A14</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer14"></div>
+    </div>
+
+    <div class="parking-slot" id="slot15">
+      <h2>Parking Slot A15</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer15"></div>
+    </div>
+
+    <div class="parking-slot" id="slot16">
+      <h2>Parking Slot A16</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer16"></div>
+    </div>
+
+    <div class="parking-slot" id="slot17">
+      <h2>Parking Slot A17</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer17"></div>
+    </div>
+
+    <div class="parking-slot" id="slot18">
+      <h2>Parking Slot A18</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer18"></div>
+    </div>
+
+    <div class="parking-slot" id="slot19">
+      <h2>Parking Slot A19</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer19"></div>
+    </div>
+
+    <div class="parking-slot" id="slot20">
+      <h2>Parking Slot A20</h2>
+      <span class="status available" onclick="toggleStatus(this, 28800)">Available</span>
+      <div class="timer" id="timer20"></div>
+    </div> -->
+
+
+
+    <div class="addButton">
+      Add
+    </div>
+
+
+    <div class="slotModal" id="slotModal">
+      <div class="slot" id="slotModal">
+        <h2 class="closeBtn" onclick="toggleSlot()">X</h2>
+        <h3>Hello, Admin!</h3>
+        <p>please input correct details of drivers</p>
+        <input id="slot_modal" placeholder="Slot Name" type="name" name="" id="">
+
+        <input id="driver_name" placeholder="Driver's Name" type="name" name="" id="">
+
+        <input id="plate_num" placeholder="Plate Number" type="text" name="" id="">
+  
+        <select id="vehicle_type" name="" id="">
+          <option value="Car">Car</option>
+          <option value="Motorcycle">Motorcycle</option>
+          <option value="Bicycle">Bicycle</option>
+          <option value="E-Bike">E-Bike</option>
+        </select>
+  
+  
+        <select name="" id="user_type">
+          <option value="Student">Student</option>
+          <option value="Teacher">Teacher</option>
+        </select>
+  
+        <div class="addSlot">
+          Add Slot
+        </div>
+  
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <script src="Crud.js"></script>
+
+  <script src="middleware.js"></script>
+
+  <script>
+    /*
+    // Function to toggle the parking status and start/reset a timer
+    //function toggleStatus(element, timeLeft = 28800) { // 8 hours in seconds
+      const status = element;
+      const timerElement = element.nextElementSibling;
+      const slotId = timerElement.id;
+
+      // Check if the slot is available or occupied
+      if (status.classList.contains("available")) {
+        status.classList.remove("available");
+        status.classList.add("occupied");
+        status.innerHTML = "Occupied";
+
+        // Start the timer
+        startTimer(slotId, timeLeft);
+      } else {
+        status.classList.remove("occupied");
+        status.classList.add("available");
+        status.innerHTML = "Available";
+
+        // Reset the timer
+        clearInterval(window[slotId + "Timer"]);
+        timerElement.innerHTML = "";
+      }
+    }
+
+    // Timer function
+    function startTimer(slotId, timeLeft) {
+      const timerElement = document.getElementById(slotId);
+      window[slotId + "Timer"] = setInterval(() => {
+        if (timeLeft > 0) {
+          timeLeft--;
+          const hours = Math.floor(timeLeft / 3600);
+          const minutes = Math.floor((timeLeft % 3600) / 60);
+          const seconds = timeLeft % 60;
+          timerElement.innerHTML = `${hours}:${minutes < 10 ? "0" : ""
+            }${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+        } else {
+          clearInterval(window[slotId + "Timer"]);
+          timerElement.innerHTML = "Time's up!";
+        }
+      }, 1000);
+    }
+*/
+    // Function to move to the next parking slot
+    function moveToNextSlot() {
+      const currentSlot = document.querySelector(".parking-slot.active");
+      if (currentSlot) {
+        currentSlot.classList.remove("active");
+        const nextSlot =
+          currentSlot.nextElementSibling ||
+          document.querySelector(".parking-slot:first-child");
+        nextSlot.classList.add("active");
+      } else {
+        document
+          .querySelector(".parking-slot:first-child")
+          .classList.add("active");
+      }
+    }
+
+    function toggleMenu() {
+      const burgerNav = document.getElementById('burgerNav');
+      // Toggle the burger menu visibility
+      if (burgerNav.style.display === 'block') {
+        burgerNav.style.display = 'none';
+      } else {
+        burgerNav.style.display = 'block';
+      }
+    }
+
+
+    function toggleSlot() {
+  const modal = document.getElementById('slotModal');
+  
+  // Check if the modal is currently displayed
+  if (modal.style.display === 'block') {
+    modal.style.display = 'none'; // Hide the modal
+  } else {
+    modal.style.display = 'none'; // Show the modal
+  }
+}
+
+ 
+  </script> 
+
+</body>
+
+</html>
